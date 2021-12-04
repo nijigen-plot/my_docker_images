@@ -1,0 +1,12 @@
+version: '3'
+services:
+  python3.7.12:
+    restart: always
+    build: .
+    ports:
+      - "8000:8888"
+    container_name: 'python3.7.12'
+    working_dir: '/root/'
+    tty: true
+    volumes:
+      - ./opt:/root/opt
